@@ -34,5 +34,11 @@
         "id": "EnergyUsageMeterWindow",
         "description": "Energy usage over a window of 7 days",
         "expression": "window('SUM', EnergyUsageMeter, -7, 7)"
+    },
+    {
+        "name": "EnergyUsageBulbWindow",
+        "id": "EnergyUsageBulbWindow",
+        "description": "Energy usage over a window of 7 days",
+        "expression": "window('SUM', EnergyUsageBulb, -7, 7)"
     }
 ]

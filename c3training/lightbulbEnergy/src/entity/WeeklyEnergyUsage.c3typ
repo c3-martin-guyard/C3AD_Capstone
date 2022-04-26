@@ -1,3 +1,7 @@
 type WeeklyEnergyUsage {
+    // Energy usage over window of 7 days
     energyUsageMeter: member function(endDate: string): double js server
+
+    // Energy usage for smart bulbs over window of 7 days
+    energyUsageBulb: member function(endDate: string): double js server
 }
