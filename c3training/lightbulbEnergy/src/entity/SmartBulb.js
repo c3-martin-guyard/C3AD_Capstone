@@ -18,7 +18,7 @@ function lifeSpanInYears() {
     return lifeSpanInYears;
 }
 
-function _getSmartBulbsLifespan() {
+function getSmartBulbsLifesSpan() {
     var smartBulbs = SmartBulb.fetch({
         include: "id",
         limit: -1
@@ -34,13 +34,19 @@ function _getSmartBulbsLifespan() {
 }
 
 function shortestLifeSpanBulb() {
-    var smartBulbsLifespan = _getSmartBulbsLifespan();
+    var smartBulbsLifespan = getSmartBulbsLifesSpan();
     var shortestLifespanSmartBulb = smartBulbsLifespan.reduce((prev, curr) => prev.lifeSpan < curr.lifeSpan ? prev : curr);
     return shortestLifespanSmartBulb.id;
 }
 
 function longestLifeSpanBulb() {
-    var smartBulbsLifespan = _getSmartBulbsLifespan();
+    var smartBulbsLifespan = getSmartBulbsLifesSpan();
     var longestLifespanSmartBulb = smartBulbsLifespan.reduce((prev, curr) => prev.lifeSpan > curr.lifeSpan ? prev : curr);
     return longestLifespanSmartBulb.id;
+}
+
+function averageLifeSpanBulb() {
+    var smartBulbsLifespan = getSmartBulbsLifesSpan();
+    var averageLifeSpan = smartBulbsLifespan.reduce((acc, curr) => acc + curr.lifeSpan, 0) / smartBulbsLifespan.length;
+    return averageLifeSpan;
 }

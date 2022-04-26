@@ -13,4 +13,7 @@ remix type SmartBulb {
 
     // Find the id of the smartbulb with the longest lifespan
     longestLifeSpanBulb: function(): string js server
+
+    // Find the average lifespan for smartBulbs
+    averageLifeSpanBulb: function(): double js server
 }
