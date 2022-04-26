@@ -1,0 +1,14 @@
+[
+    {
+        "name": "IsOutage",
+        "id": "IsOutage",
+        "description": "Tracks every time the PowerGrid goes down (from 1 to 0)",
+        "expression": "sum(eval('HOUR', rollingDiff(PowerGridStatus))) < 0 ? 1 : 0"
+    },
+    {
+        "name": "NumberOfOutages",
+        "id": "NumberOfOutages",
+        "description": "Sums up the number of outage over time",
+        "expression": "rolling('SUM', IsOutage)"
+    }
+]
