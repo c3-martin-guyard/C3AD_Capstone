@@ -1,1 +1,5 @@
+/**
+* City.c3typ
+* Remix City entity from lightbulbCore pkg
+*/
 remix type City mixes WeeklyEnergyUsage

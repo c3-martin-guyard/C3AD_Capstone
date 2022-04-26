@@ -1,13 +1,5 @@
 [
     {
-        "id": "AveragePowerMeter_Building",
-        "name": "AveragePowerMeter",
-        "srcType": "Building",
-        "description": "average rate of energy usage (power) in watts",
-        "path": "apartments.smartMeterElectric.meterMeasurementSeries",
-        "expression": "sum(avg(normalized.data.power))"
-    },
-    {
         "id": "AveragePowerMeter_City",
         "name": "AveragePowerMeter",
         "srcType": "City",
@@ -16,11 +8,19 @@
         "expression": "sum(avg(normalized.data.power))"
     },
     {
-        "id": "AveragePowerBulb_Building",
-        "name": "AveragePowerBulb",
+        "id": "AveragePowerMeter_Building",
+        "name": "AveragePowerMeter",
         "srcType": "Building",
         "description": "average rate of energy usage (power) in watts",
-        "path": "apartments.fixtureHistory.from.bulbHistory.from.bulbMeasurements",
+        "path": "apartments.smartMeterElectric.meterMeasurementSeries",
+        "expression": "sum(avg(normalized.data.power))"
+    },
+    {
+        "id": "AveragePowerMeter_Apartment",
+        "name": "AveragePowerMeter",
+        "srcType": "Apartment",
+        "description": "average rate of energy usage (power) in watts",
+        "path": "smartMeterElectric.meterMeasurementSeries",
         "expression": "sum(avg(normalized.data.power))"
     },
     {
@@ -29,6 +29,14 @@
         "srcType": "City",
         "description": "average rate of energy usage (power) in watts",
         "path": "buildings.apartments.fixtureHistory.from.bulbHistory.from.bulbMeasurements",
+        "expression": "sum(avg(normalized.data.power))"
+    },
+    {
+        "id": "AveragePowerBulb_Building",
+        "name": "AveragePowerBulb",
+        "srcType": "Building",
+        "description": "average rate of energy usage (power) in watts",
+        "path": "apartments.fixtureHistory.from.bulbHistory.from.bulbMeasurements",
         "expression": "sum(avg(normalized.data.power))"
     },
     {

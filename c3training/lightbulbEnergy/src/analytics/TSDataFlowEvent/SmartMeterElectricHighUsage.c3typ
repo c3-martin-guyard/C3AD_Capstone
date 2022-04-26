@@ -1,0 +1,2 @@
+@DFE(interval="DAY", period="DAY", metric="EnergyUsageMeter", flattenWindows=false)
+type SmartMeterHighUsage mixes TSDataFlowEvent<SmartMeterElectric>

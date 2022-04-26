@@ -1,1 +1,5 @@
+/**
+* Apartment.c3typ
+* Remix Apartment entity from lightbulbCore pkg
+*/
 remix type Apartment mixes WeeklyEnergyUsage

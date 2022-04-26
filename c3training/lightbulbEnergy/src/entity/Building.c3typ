@@ -1,3 +1,7 @@
+/**
+* Building.c3typ
+* Remix Building entity from lightbulbCore pkg
+*/
 remix type Building mixes WeeklyEnergyUsage {
     // The collection of events for this building
     buildingEvents: [BuildingEvent](building)

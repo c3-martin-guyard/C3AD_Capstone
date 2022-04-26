@@ -1,0 +1,7 @@
+/**
+* SmartMeter.c3typ
+* Remix SmartMeter entity from lightbulbCore pkg
+*/
+remix type SmartMeter {
+    meterEvents: [SmartMeterEvent](smartMeter)
+}

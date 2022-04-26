@@ -1,0 +1,6 @@
+/**
+* SmartMeterHighUsageAlert.c3typ
+*/
+type SmartMeterHighUsageAlert mixes Analytic<SmartMeterHighUsage, SmartMeterEvent> {
+  process: ~ js server
+}

@@ -1,0 +1,20 @@
+/**
+* SmartMeterEvent.c3typ
+* An event that happens to a single {@link SmartMeter}.
+*/
+@db(datastore='cassandra', 
+  partitionKeyField='smartMeter',  
+  persistenceOrder='eventDate',  
+  persistDuplicates=false, 
+  compactType=true,   
+  shortId=true)
+entity type SmartMeterEvent schema name "SMRT_MTR_EVNT" {
+ // The {@link SmartMeter} connected to this event.
+ smartMeter: !SmartMeter
+ // The time at which this event happen.
+ eventDate: !datetime
+ // The event code used to distinguish events.
+ eventCode: !string
+ // The type of this event.
+ meterType: !string enum('ELECTRIC', 'GAS', 'WATER')
+}
