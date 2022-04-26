@@ -1,0 +1,14 @@
+/**
+ * This is the CompoundDataFlowEvent for {@link SmartBulbDefective} to be used as input into {@link SmartBulbDefectiveAlert}.
+ * Notice how the SmartBulbDefective type's timeseries is passed along through the defective field.
+ * Additionally, with the flattenWindows property of the @DFE set to true, the many 1-hour timeseries will be concatenated into a single timeseries and evaluated that way.
+ */
+@DFE(interval='DAY', period='30DAY', flattenWindows=true,  triggerDFEs='SmartBulbDefective')
+type SmartBulbDefectiveInput  mixes CompoundDataFlowEvent<SmartBulb> {
+	// Stores the timeseries from SmartBulbDefective TsDfe for input into the Analytic
+	bulbDefective: SmartBulbDefective
+	// Stores the timeseries from SmartBulbLongLife TsDfe for input into the Analytic
+	bulbLife: SmartBulbEndOfLife
+	// Stores the timeseries from SmartBulbOverheat TsDfe for input into the Analytic
+	bulbTemperature: SmartBulbOverheat
+}

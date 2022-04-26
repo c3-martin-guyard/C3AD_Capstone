@@ -1,0 +1,6 @@
+/**
+ * The analytic that monitors {@link SmartBulb} lifespan metric(s)  and will produce {@link SmartBulbEvent} when triggered.
+ */
+type SmartBulbEndOfLifeAlert mixes Analytic<SmartBulbEndOfLife, SmartBulbEvent> {
+    process : ~ js server
+}

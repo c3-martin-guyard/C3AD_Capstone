@@ -1,0 +1,6 @@
+/**
+ * The analytic that monitors {@link SmartBulb} defective metrics and will produce {@link SmartBulbEvent} when triggered.
+ */
+type SmartBulbDefectiveAlert mixes Analytic<SmartBulbDefectiveInput, SmartBulbEvent> {
+	process : ~ js server
+}

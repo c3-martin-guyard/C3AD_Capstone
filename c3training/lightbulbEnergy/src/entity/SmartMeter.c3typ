@@ -2,6 +2,6 @@
 * SmartMeter.c3typ
 * Remix SmartMeter entity from lightbulbCore pkg
 */
-remix type SmartMeter {
+remix type SmartMeter mixes WeeklyEnergyUsage {
     meterEvents: [SmartMeterEvent](smartMeter)
 }

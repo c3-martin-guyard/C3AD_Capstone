@@ -1,0 +1,6 @@
+/**
+ * The Simple DFE for the {link @SmartBulbOverheatAlert} Analytic.
+ * Notice that by using the HasEverFailed metric in the @DFE annotation, we will pass on the underlying data as a timeseries to any CDFE and Analytic that uses this type.
+ */
+@DFE(interval='DAY', period='30DAY', metric='HasEverFailed', flattenWindows=true)
+type SmartBulbDefective mixes TSDataFlowEvent<SmartBulb>

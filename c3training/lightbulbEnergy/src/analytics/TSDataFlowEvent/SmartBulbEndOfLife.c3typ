@@ -1,0 +1,7 @@
+/**
+ * The Simple DFE for the {link @SmartEndOfLifeAlert} Analytic.
+ * Notice that by using the DurationOnInHours metric in the @DFE annotation, 
+ * we will pass on the underlying data as a timeseries to any CDFE and Analytic that uses this type.
+ */
+@DFE(interval='DAY', period='30DAY', metric='DurationOnInHours', flattenWindows=true)
+type SmartBulbEndOfLife mixes TSDataFlowEvent<SmartBulb>

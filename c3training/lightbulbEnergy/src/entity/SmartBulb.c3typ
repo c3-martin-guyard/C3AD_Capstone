@@ -3,7 +3,7 @@
 * Remix SmartBulb entity from lightbulbCore pkg
 */
 remix type SmartBulb {
-    bulbEvents: [SmartBulbEvent](smartBulb)
+    bulbEvents: [SmartBulbEvent](smartBulb, id)
 
     // The lifespan of a {@link SmartBulb} from manufacture to failure
     lifeSpanInYears: member function(bulbId: string): double js server
