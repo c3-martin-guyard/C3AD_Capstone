@@ -1,0 +1,15 @@
+/**
+* ElectricSmartMeter.c3typ
+* A smart elctric meter the streams energy consumption in kW
+*/
+extendable entity type SmartMeter mixes MetricEvaluatable schema name "SMRT_MTR" {
+
+    // The name of this meter's {@link Manufacturer}.
+    manufacturer: !Manufacturer
+    
+    // The time at which this meter was manufactured.
+    startDate: !datetime
+
+    // The apartment this meter is in
+    apartment: Apartment
+}

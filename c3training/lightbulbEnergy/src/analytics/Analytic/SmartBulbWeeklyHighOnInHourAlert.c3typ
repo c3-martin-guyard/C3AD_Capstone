@@ -1,0 +1,3 @@
+type SmartBulbWeeklyHighOnInHourAlert mixes Analytic<SmartBulbWeeklyHighOnInHour, SmartBulbEvent> {
+  process: ~ js server
+}

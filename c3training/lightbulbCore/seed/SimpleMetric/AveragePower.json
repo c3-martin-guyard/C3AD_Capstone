@@ -1,0 +1,18 @@
+[
+    {
+        "id": "AveragePowerBulb_SmartBulb",
+        "name": "AveragePowerBulb",
+        "srcType": "SmartBulb",  
+        "description": "average rate of energy usage (power) in watts",
+        "path": "bulbMeasurements",
+        "expression": "avg(avg(normalized.data.power))"
+    },
+    {
+        "id": "AveragePowerMeter_SmartMeterElectric",
+        "name": "AveragePowerMeter",
+        "srcType": "SmartMeterElectric",  
+        "description": "average rate of energy usage (power) in kW",
+        "path": "meterMeasurementSeries",
+        "expression": "avg(avg(normalized.data.power))"
+    }
+]

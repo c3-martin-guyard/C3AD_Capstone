@@ -1,0 +1,2 @@
+@DFE(interval="DAY", period="30DAY", metric="AverageTemperature", flattenWindows=true)
+type SmartBulbOverheat mixes TSDataFlowEvent<SmartBulb>

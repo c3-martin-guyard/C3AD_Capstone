@@ -1,0 +1,18 @@
+/**
+* TransformSourceSmartBulbRiskScoreToSmartBulbRiskScore.c3typ
+* This type is the data flow from the {@link SourceSmartBulbMeasurement} 
+* to the {@link SmartBulbMeasurement} type.
+*/
+type TransformSourceSmartBulbRiskScoreToSmartBulbRiskScore mixes SmartBulbRiskScore transforms SourceSmartBulbRiskScore {
+  // The id of the riskScore
+  id: ~ expression "id2"
+
+  // The value of the "riskScore" field as a percentage
+  riskScore: ~ expression "score"
+
+  // The "idSmartbulb" field mapped to the smartBulb feild
+  smartBulb: ~ expression {id: "idSmartbulb"}
+
+  // The "timestamp" field for the riskScore
+  timestamp: ~ expression "timestamp"
+}

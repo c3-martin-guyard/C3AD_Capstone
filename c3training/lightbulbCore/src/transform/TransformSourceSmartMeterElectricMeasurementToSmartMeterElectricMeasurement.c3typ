@@ -1,0 +1,18 @@
+/**
+* TransformSourceSmartMeterElectricMeasurementToSmartMeterElectricMeasurement.c3typ
+* Transforms the data from the {@link SourceSmartMeterElectricMeasurement} to the {@link SmartMeterElectricMeasurement} Type.
+*/
+type TransformSourceSmartMeterElectricMeasurementToSmartMeterElectricMeasurement mixes SmartMeterElectricMeasurement transforms SourceSmartMeterElectricMeasurement {
+
+    // This field will take the concatenated value of "SMEMS_serialNo_" and the "SN" field for the record
+    parent: ~ expression { id: "concat('SMEMS_serialNo_',SN)"}
+
+    // The start time for the interval value
+    start: ~ expression "Start"
+
+    // The end time for the interval value
+    end: ~ expression "End" 
+
+    // The power consumed duringth interval
+    power: ~ expression "kW" 
+}

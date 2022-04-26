@@ -1,0 +1,38 @@
+[
+    {
+        "name": "EnergyUsageMeter",
+        "id": "EnergyUsageMeter",
+        "description": "Energy usage from the smart meter (kWh - calculate from kilowatts)",
+        "expression": "treatAsUnit('kilowatt_hour', sum(eval('HOUR', AveragePowerMeter)))"
+    },
+    {
+        "name": "EnergyUsageBulb",
+        "id": "EnergyUsageBulb",
+        "description": "Energy usage from the smart bulb (kWh - calculate from watts)",
+        "expression": "treatAsUnit('kilowatt_hour', sum(eval('HOUR', AveragePowerBulb/1000)))"
+    },
+    {
+        "name": "EnergyUsageDifference",
+        "id": "EnergyUsageDifference",
+        "description": "Energy usage from non smart bulb devices (kWh - calculate from kilowatts)",
+        "expression": "EnergyUsageMeter - EnergyUsageBulb"
+    },
+    {
+        "name": "EnergyUsagePercentageBulb",
+        "id": "EnergyUsagePercentageBulb",
+        "description": "usage of SmartBulbs as a percentage of all energy recorded on the SmartMeters in a building (on a scale from 0-100)",
+        "expression": "(EnergyUsageBulb/EnergyUsageMeter) * 100"
+    },
+    {
+        "name": "EnergyUsagePercentageOther",
+        "id": "EnergyUsagePercentageOther",
+        "description": "usage of everything other than SmartBulbs as a percentage of all energy recorded on the SmartMeter (on a scale from 0-100)",
+        "expression": "(EnergyUsageDifference/EnergyUsageMeter) * 100"
+    },
+    {
+        "name": "EnergyUsageMeterWindow",
+        "id": "EnergyUsageMeterWindow",
+        "description": "Energy usage over a window of 7 days",
+        "expression": "window('SUM', EnergyUsageMeter, -7, 7)"
+    }
+]

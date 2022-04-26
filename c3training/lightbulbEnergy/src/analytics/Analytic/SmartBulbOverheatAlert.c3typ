@@ -1,0 +1,6 @@
+/**
+* SmartBulbOverheatAlert.c3typ
+*/
+type SmartBulbOverheatAlert mixes Analytic<SmartBulbOverheat, SmartBulbEvent> {
+  process: ~ js server
+}

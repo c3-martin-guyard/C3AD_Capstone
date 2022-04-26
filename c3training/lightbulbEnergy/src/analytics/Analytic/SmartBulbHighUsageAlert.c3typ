@@ -1,0 +1,6 @@
+/**
+* SmartBulbHighUsageAlert.c3typ
+*/
+type SmartBulbHighUsageAlert mixes Analytic<SmartBulbHighUsage, BuildingEvent> {
+  process: ~ js server
+}

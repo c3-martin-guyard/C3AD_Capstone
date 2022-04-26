@@ -1,0 +1,16 @@
+/**
+* SmartBulb.c3typ
+* Remix SmartBulb entity from lightbulbCore pkg
+*/
+remix type SmartBulb {
+    bulbEvents: [SmartBulbEvent](smartBulb)
+
+    // The lifespan of a {@link SmartBulb} from manufacture to failure
+    lifeSpanInYears: member function(bulbId: string): double js server
+
+    // Find the id of the SmartBulb with the shortest lifespan
+    shortestLifeSpanBulb: function(): string js server
+
+    // Find the id of the smartbulb with the longest lifespan
+    longestLifeSpanBulb: function(): string js server
+}

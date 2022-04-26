@@ -1,0 +1,12 @@
+/**
+* SmartMeterElectric.c3typ
+* A smart elctric meter that streams energy consumption rate in kW
+*/
+entity type SmartMeterElectric extends SmartMeter type key "SMRT_MTR_ELCTRC" {
+
+    // Unit of measurement for power consumption
+    powerUOM: Unit post default "{id:'kilowatt'}"
+    
+    // This meter's measurement Series.
+    meterMeasurementSeries: SmartMeterElectricMeasurementSeries
+}

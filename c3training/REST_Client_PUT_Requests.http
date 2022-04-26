@@ -1,0 +1,12 @@
+@hostUrl = http://localhost:8080
+@tenant = c3training
+@tag = dev1
+@C3AuthToken = 30331d5463f6d94603e77898248ffff63c75a2c731dd854f01ae1515c5069b2873b2
+
+###
+PUT {{hostUrl}}/import/1/{{tenant}}/{{tag}}/SmartBulbMeasurementSource/SmartBulbMeasurement2015-2019.csv HTTP/1.1
+Content-Type: text/csv
+Authorization: {{C3AuthToken}}
+
+< /Users/martin.guyardc3.ai/Development/C3AD/C3AD_Course_Files/C3AD_1_Starter_Repo/Data_Files/Uploaded/SmartBulbMeasurement2015-2019.csv
+###

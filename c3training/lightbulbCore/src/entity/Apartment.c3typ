@@ -1,0 +1,18 @@
+/**
+* Apartment.c3typ
+* An apartment in a {@link Building} with many {@link Fixture}s in it
+*/
+entity type Apartment mixes MetricEvaluatable schema name "APRTMNT" {
+    // The building this apartment is in
+    building: !Building
+    
+    // The fixture history for an apartment
+    @db(order='descending(start)')
+    fixtureHistory: [FixtureToApartmentRelation](to)
+
+    // Current fixtures in an apartment
+    currentFixtures: [Fixture](currentApartment)
+
+    // The electric SmartMeter for this apartment
+    smartMeterElectric: SmartMeterElectric
+}

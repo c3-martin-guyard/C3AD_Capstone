@@ -1,0 +1,20 @@
+/**
+* BuildingEvent.c3typ
+* An event that happens to a single {@link Building}.
+*/
+@db(datastore='cassandra', 
+  partitionKeyField='building', // smartBulb ?
+  persistenceOrder='eventDate', // start ?
+  persistDuplicates=false, 
+  compactType=true,   
+  shortId=true)
+entity type BuildingEvent schema name "BLDNG_EVNT" {
+ // The {@link Building} connected to this event.
+ building: !Building
+ // The time at which this event happen.
+ eventDate: !datetime
+ // The event code used to distinguish events.
+ eventCode: !string
+ // The type of this event.
+ eventType: !string enum('USAGE')
+}

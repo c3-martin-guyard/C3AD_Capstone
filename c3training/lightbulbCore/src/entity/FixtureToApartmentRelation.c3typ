@@ -1,0 +1,6 @@
+/**
+* FixtureToApartmentRelation.c3typ
+* Relation between {@link Fixture} and {@link Apartment}
+*/
+@db(index=['to','from'])
+entity type FixtureToApartmentRelation mixes TimedIntervalRelation<Fixture, Apartment> schema name "FXTR_APTMT_RLTN"

@@ -1,0 +1,8 @@
+/**
+* TransformSourceFixtureToApartmentRelationToFixture.c3typ
+* transforms {@link SourceFixtureToApartmentRelation} to {@link Fixture}
+*/
+type TransformSourceFixtureToApartmentRelationToFixture mixes Fixture transforms SourceFixtureToApartmentRelation {
+    // unique id for a fixture
+    id: ~ expression "Fixture"
+}

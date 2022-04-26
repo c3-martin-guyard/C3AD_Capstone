@@ -1,0 +1,25 @@
+/*
+* Copyright 2009-2020 C3, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+* The raw data for SmartBulbRiskScore information.
+*/
+type SourceSmartBulbRiskScore mixes Source {
+ // The unique id of the riskScore value
+ id2: string
+
+// The riskScore value
+ score: double
+
+// The id of the {@link SmartBulb} the riskScore is for
+ idSmartbulb: string
+
+// The timestamp of the riskScore
+ timestamp: datetime
+}

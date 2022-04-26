@@ -1,0 +1,14 @@
+/**
+* SmartMeterElectricMeasurement.c3typ
+* A single measurement taken from a single {@link SmartBulb}
+*/
+@db(datastore='cassandra',
+ partitionKeyField='parent',
+ persistenceOrder='start,end',
+ persistDuplicates=false,
+ compactType=true)
+entity type SmartMeterElectricMeasurement mixes TimeseriesDataPoint<SmartMeterElectricMeasurementSeries>  schema name 'SMRTMTR_E_MSRMNT' {
+ // The measured rateof neregy usage (power) for the interval (P=IV or current * voltage)
+ @ts(treatment='sum', unitPath="parent.smartMeterElectric.powerUOM")
+ power: double 
+}

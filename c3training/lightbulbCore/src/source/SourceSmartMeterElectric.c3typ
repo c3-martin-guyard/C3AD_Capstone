@@ -1,0 +1,17 @@
+/**
+* SourceSmartMeterElectric.c3typ
+* This type maps the raw data for {@link SmartMeterElectric} information.
+*/
+type SourceSmartMeterElectric mixes Source {
+    // The serial number of an electric SmartMeter
+    SN: string
+    
+    // The manufacturer of an electric SmartMeter
+    Manufacturer: string
+    
+    // The start date of an electric SmartMeter
+    Start_Date: datetime
+
+    // The apartment this electric SmartMeter is in
+    Apartment: string
+}

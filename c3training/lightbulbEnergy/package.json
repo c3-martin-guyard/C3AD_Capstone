@@ -1,0 +1,8 @@
+{
+    "name": "lightbulbEnergy",
+    "description": "Lightbulb Practice Exercises",
+    "author": "C3 Training",
+    "dependencies": [
+        "lightbulbCore"
+    ]
+}

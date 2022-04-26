@@ -1,0 +1,12 @@
+/**
+* SourceManufacturer.c3typ
+* The source type for {@link Manufacturer}
+*/
+
+type SourceManufacturer mixes Source {
+    // id of the Manufacturer
+    id: string
+ 
+    // name of the Manufacturer
+    name: string
+}

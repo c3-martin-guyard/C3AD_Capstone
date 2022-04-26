@@ -1,0 +1,2 @@
+@DFE(interval="DAY", period="DAY", metric="EnergyUsagePercentageBulb", flattenWindows=true)
+type SmartBulbHighUsage mixes TSDataFlowEvent<Building>

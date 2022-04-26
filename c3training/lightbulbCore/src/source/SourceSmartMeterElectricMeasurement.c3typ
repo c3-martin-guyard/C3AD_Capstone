@@ -1,0 +1,18 @@
+/**
+* SourceSmartMeterElectricMeasurement.c3typ
+* This type represents the raw data for {@link SmartMeterElectric} measurements
+*/
+type SourceSmartMeterElectricMeasurement mixes Source {
+ 
+ // The id of the Electric SmartMeter
+ SN: string 
+ 
+ // The datetime for the start of a measurement
+ Start: datetime 
+ 
+ // The datetime for the end of a measurement
+ End: datetime
+ 
+ // The number of kilowatts used in the interval
+ kW: double
+}

@@ -1,0 +1,12 @@
+/**
+* Manufacturer.c3typ 
+* A company that manufactures lightbulbs.
+*/
+entity type Manufacturer schema name "MNFCTRR"{
+
+    // List of lightbulbs made by this manufacturer
+    lightBulbs: [LightBulb](manufacturer)
+
+    // List of smartmeters made by this manufacturer
+    smartMeters: [SmartMeter](manufacturer)
+}

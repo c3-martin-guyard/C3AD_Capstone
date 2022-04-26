@@ -1,0 +1,20 @@
+/**
+* TransformSourceSmartMeterElectricToSmartMeterElectric.c3typ
+* This type transforms data from the {@link SourceSmartMeterElectric} to the {@link SmartMeterElectric} type.
+*/
+type TransformSourceSmartMeterElectricToSmartMeterElectric mixes SmartMeterElectric transforms SourceSmartMeterElectric {
+  // The id of the meter
+  id: ~ expression "SN"
+  
+  // The manufacturer of the meter - reference to the {@link Manufacturer} type
+  manufacturer: ~ expression {id: "Manufacturer"}
+  
+  // The manufacture date of the meter
+  startDate: ~ expression "Start_Date"
+  
+  // The apartment this meter is in
+  apartment: ~ expression { id: "Apartment"}
+
+  // The id of the one SmartMeterElectricMeasurementSeries for this meter
+  meterMeasurementSeries: ~ expression { id: "concat('SMEMS_serialNo_',SN)"}
+}

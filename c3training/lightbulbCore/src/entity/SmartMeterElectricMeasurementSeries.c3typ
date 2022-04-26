@@ -1,0 +1,10 @@
+/*
+* SmartMeterElectricMeasurementSeries.c3typ
+* A series of measurements taken from a single {@link SmartBulb}.
+*/
+@db(unique=['smartMeterElectric'])
+entity type SmartMeterElectricMeasurementSeries mixes TimeseriesHeader<SmartMeterElectricMeasurement> schema name "SMRTMTR_E_MSMT_SRS" {
+
+ // The the {@link SmartMeterElectric} for these measurements
+ smartMeterElectric: !SmartMeterElectric
+}

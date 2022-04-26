@@ -1,0 +1,13 @@
+/**
+* TransformSourceManufacturerToManufacturer.c3typ
+* This type encapsulates the data flow from the {@link SourceSmartBulb} to the
+* {@link Manufacturer} type.
+*/
+type TransformSourceManufacturerToManufacturer mixes Manufacturer transforms SourceManufacturer {
+
+    // The id of the Manufacturer
+    id: ~expression "id"
+
+    // The full name of the Manufacturer
+    name: ~expression "name"
+}

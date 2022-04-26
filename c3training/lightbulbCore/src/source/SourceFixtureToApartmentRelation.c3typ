@@ -1,0 +1,17 @@
+/**
+* SourceFixtureToApartmentRelation.c3typ
+* The source for {@link Fixture} to {@link Apartment} relationship data 
+*/
+type SourceFixtureToApartmentRelation mixes Source {
+    // The id of a fixture
+    Fixture: string
+
+    // The id of an apartment
+    Apartment: string
+
+    // The start of a fixture to apartment relationship
+    StartDate: datetime
+
+    // The end of a fixture to apartment relationship
+    EndDate: datetime
+}
